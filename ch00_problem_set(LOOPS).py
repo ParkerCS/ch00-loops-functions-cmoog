@@ -77,4 +77,17 @@ print("The probability of success is:", (total_trials - failures) / total_trials
 # What are the digits?
 # Note: to make ABCD and DCBA conventional numbers, neither A nor D can be zero.
 # Use a quadruple-nested loop to solve.
+for a in range(10):
+    for b in range(10):
+        for c in range(10):
+            for d in range(10):
+                first_value = (d * 1000) + (c * 100) + (b * 10) + a
+                second_value = (a * 1000) + (b * 100) + (c * 10) + d
+                if first_value == 4 * second_value and a != 0 and d != 0:
+                    print("a =", a)
+                    print("b =", b)
+                    print("c =", c)
+                    print("d =", d)
+
+
 
