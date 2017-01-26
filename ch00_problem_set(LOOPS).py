@@ -1,4 +1,5 @@
 # LOOPS (22pts TOTAL)
+import random
 
 # PROBLEM 1 (Fibonacci - 4pts)
 ## The Fibonacci sequence is a sequence of numbers that starts with 1, followed by 1 again.
@@ -6,6 +7,16 @@
 # I.e., the sequence starts with 1, 1, 2, 3, 5, 8, 13, 21,...
 # Write a program that calculates and prints the Fibonacci sequence
 # until the numbers get higher than 1000.
+
+number = 1
+sequence_list = [1, 1]
+index = 2
+while number <= 1000:
+    number = sequence_list[index - 2] + sequence_list[index - 1]
+    sequence_list.append(number)
+    index += 1
+print(sequence_list)
+
 
 
 # PROBLEM 2 (Number Guessing Game - 6pts)
@@ -17,6 +28,21 @@
 # It might be wise, for testing purposes, to also display the number that the
 # program randomly picks, until you are sure that the program works correctly
 
+computer_selection = random.randrange(1, 1001)
+print("The computer selection is:", computer_selection)
+
+correct = False
+while not correct:
+    user_guess = input("Please enter your guess: ")
+    if int(user_guess) > computer_selection:
+        print("Lower")
+    elif int(user_guess) < computer_selection:
+        print("Higher")
+    else:
+        print("Correct!!")
+        correct = True
+
+
 # PROBLEM 3 (Dice Hi-Low - 6pts)
 # You roll five six-sided dice, one by one.
 # How big is the probability that the value of each die
@@ -24,6 +50,26 @@
 # For example, the sequence “1, 1, 4, 4, 6” is a success,
 # but “1, 1, 4, 3, 6” is not. Determine the
 # probability of success using a simulation of a large number of trials.
+list = [1]
+print(list[0] < list[-1])
+done = False
+total_trials = 0
+failures = 0
+while not done:
+    roll_list = []
+    finished = False
+    for i in range(6):
+        roll = random.randrange(1 ,7)
+        roll_list.append(roll)
+        if (roll_list[i] < roll_list[i-1] and i != 0) and not finished:
+            failures += 1
+            finished = True
+    total_trials += 1
+    if total_trials > 100000:
+        done = True
+
+print("The probability of success is:", (total_trials - failures) / total_trials * 100, "percent")
+
 
 # PROBLEM 4 (Number Puzzler - 6pts)
 # A, B, C, and D are all different digits.
