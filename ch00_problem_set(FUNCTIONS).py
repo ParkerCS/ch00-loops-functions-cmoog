@@ -5,7 +5,7 @@ import random
 # Make a function which asks the user to enter a string, then prints the length of that string.
 # You will need to use the input() function.
 # Make a call to that function
-'''
+
 def input_length(string):
     str(string)
     print("Your string is:", len(string), "characters")
@@ -47,7 +47,7 @@ def sequence(first_number, second_number, third_number):
 
 sequence(input("type your first number: "), input("input your second number: "), input("input your third number: "))
 
-'''
+
 
 # PROBLEM 4 (e to the... - 3pts)
 # Calculate the value of e (from the math library) to the power of -1, 0, 1, 2, and 3.
@@ -55,7 +55,7 @@ sequence(input("type your first number: "), input("input your second number: "),
 
 
 def e_raised(power):
-    print("e ^", "(" + str(power) + ") = " + str(math.e ** (power)))
+    print("e ^", "(" + str(power) + ") = " + str(round(math.e ** (power), 5)))
 e_raised(-1)
 e_raised(0)
 e_raised(1)
