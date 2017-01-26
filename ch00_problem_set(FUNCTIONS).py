@@ -20,7 +20,7 @@ input_length(input("Input your string here: "))
 # Write a program that asks the user for the lengths of the two sides that meet at a right angle.
 # Then calculate the length of the third side, and display it in a nicely formatted way.
 # You may ignore the fact that the user can enter negative or zero lengths for the sides.
-
+print("The following program will calculate the length of the hypotenuse of a right triangle given the lengths of the legs.")
 first_leg = input("What is the length of the first leg?: ")
 second_leg = input("What is the length of the second leg?: ")
 print(math.sqrt(float(first_leg) ** 2 + float(second_leg) ** 2))
@@ -68,6 +68,7 @@ e_raised(3)
 
 random_number = int(random.random() * 10) + 1
 print(random_number)
+print()
 
 
 # PROBLEM 6 (add me, multiply me - 3pts)
@@ -76,4 +77,4 @@ print(random_number)
 def add_multiply(first, second):
     return([first + second, second * first])
 
-print(add_multiply(1,2))
+print("Sum:", add_multiply(1,2)[0],"<> Product:", add_multiply(1,2)[1])
