@@ -50,8 +50,6 @@ while not correct:
 # For example, the sequence “1, 1, 4, 4, 6” is a success,
 # but “1, 1, 4, 3, 6” is not. Determine the
 # probability of success using a simulation of a large number of trials.
-list = [1]
-print(list[0] < list[-1])
 done = False
 total_trials = 0
 failures = 0
@@ -88,6 +86,3 @@ for a in range(10):
                     print("b =", b)
                     print("c =", c)
                     print("d =", d)
-
-
-
