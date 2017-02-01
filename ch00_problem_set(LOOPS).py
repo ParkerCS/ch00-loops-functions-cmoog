@@ -81,7 +81,7 @@ for a in range(10):
             for d in range(10):
                 first_value = (d * 1000) + (c * 100) + (b * 10) + a
                 second_value = (a * 1000) + (b * 100) + (c * 10) + d
-                if first_value == 4 * second_value and a != 0 and d != 0:
+                if first_value == 5 * second_value and a != 0 and d != 0:
                     print("a =", a)
                     print("b =", b)
                     print("c =", c)
