@@ -55,8 +55,8 @@ total_trials = 0
 failures = 0
 while not done:
     roll_list = []
-    finished = False
-    for i in range(6):
+    finished = False # finished with an individual series of rolls
+    for i in range(5):
         roll = random.randrange(1 ,7)
         roll_list.append(roll)
         if (roll_list[i] < roll_list[i-1] and i != 0) and not finished:
